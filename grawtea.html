@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Grawetea — Share Your Experience</title>
+  <meta name="description"
+    content="Grawetea · Quick Review — Powered by BizStreet. Share your experience in 30 seconds." />
+  <style>
+    /* -------------------------
+       Simple, premium landing CSS
+       Copy-paste friendly and responsive
+       ------------------------- */
+    :root {
+      --bg: #fbfaf8;
+      --card: #ffffff;
+      --accent: #2f6b7a;
+      /* Grawetea green */
+      --accent-2: #3b7c9a;
+      --muted: #6c6c72;
+      --radius: 14px;
+      --shadow: 0 18px 50px rgba(18, 20, 16, 0.08);
+      --maxwidth: 940px;
+      --glass: rgba(255, 255, 255, 0.6);
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      background: linear-gradient(180deg, #fbfaf8 0%, #f3efe8 100%);
+      -webkit-font-smoothing: antialiased
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: var(--maxwidth);
+      margin: 40px auto;
+      padding: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    /* Left visual column */
+    .visual {
+      flex: 0 0 380px;
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      background: linear-gradient(180deg, #1f9eba, #0a284b);
+      border-right: 1px solid rgba(16, 20, 16, 0.03);
+
+    }
+
+    .brand-logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 -8px 18px rgba(40, 90, 30, 0.03);
+      overflow: hidden;
+    }
+
+    .brand-logo img {
+      width: 84px;
+      left: 20px;
+      height: auto;
+      display: block
+    }
+
+    .visual h3 {
+      margin: 0;
+      font-size: 20px;
+      color: #0f1f12;
+      letter-spacing: 0.2px;
+    }
+
+    .visual p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+      max-width: 260px
+    }
+
+    /* Right content column */
+    .content {
+      flex: 1;
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .top {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .top .name {
+      font-weight: 800;
+      font-size: 18px;
+      color: #12210f
+    }
+
+    .top .badge {
+      margin-left: auto;
+      background: var(--glass);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 13px;
+      color: #222;
+      box-shadow: 0 8px 24px rgba(10, 15, 10, 0.04)
+    }
+
+    .headline {
+      margin: 6px 0 0;
+      font-size: 28px;
+      font-weight: 800;
+      color: #08140d;
+      line-height: 1.02;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 15px;
+      margin-top: 8px;
+      max-width: 60ch;
+    }
+
+    .cta-row {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(180deg, var(--accent-2), var(--accent));
+      color: #fff;
+      padding: 14px 18px;
+      border-radius: 12px;
+      border: none;
+      font-weight: 800;
+      font-size: 15px;
+      cursor: pointer;
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      box-shadow: 0 12px 30px rgba(46, 102, 46, 0.14)
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid rgba(16, 20, 16, 0.06);
+      padding: 12px 14px;
+      border-radius: 12px;
+      font-weight: 700;
+      color: var(--muted);
+      cursor: pointer;
+    }
+
+    .explain {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px
+    }
+
+    .powered {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 22px;
+      padding-top: 18px;
+
+      border-top: 1px dashed rgba(12, 12, 12, 0.04)
+    }
+
+    .powered img {
+      height: 28px;
+      display: block
+    }
+
+
+
+
+
+    /* small screen */
+    @media (max-width:880px) {
+      .card {
+        flex-direction: column
+      }
+
+      .visual {
+        flex: 0 0 auto;
+        border-right: none;
+        border-bottom: 1px solid rgba(16, 20, 16, 0.03)
+      }
+
+      .brand-logo {
+        width: 96px;
+        height: 96px
+      }
+
+      .headline {
+        font-size: 22px
+      }
+    }
+
+    /* focus styles */
+    :focus-visible {
+      outline: none;
+    }
+
+    .btn-primary:focus-visible,
+    .btn-secondary:focus-visible {
+      box-shadow: 0 0 0 6px rgba(60, 140, 60, 0.12);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card" role="main" aria-labelledby="page-headline">
+
+      <!-- LEFT: Branding visual -->
+      <div class="visual" aria-hidden="false" class="bg_client">
+        <div class="brand-logo">
+          <!-- Replace the filename with your Grawetea logo file -->
+          <img src="grawetea-logo.jpeg" style="width:125px;" alt="Grawetea logo">
+        </div>
+        <h3 style="font-size: 50px; color: white;">Grawetea</h3>
+        <p style="color: white;">Thanks for visiting — your feedback helps us grow. Takes 30 seconds.</p>
+      </div>
+
+      <!-- RIGHT: content + CTA -->
+      <div class="content">
+        <div>
+          <div class="top" aria-hidden="false">
+            <div class="name">Grawetea</div>
+            <div class="badge">Powered by BizStreet</div>
+          </div>
+
+          <h1 id="page-headline" class="headline">Share your experience — it helps a lot</h1>
+          <p class="subtitle">A short, branded page to guide customers from a QR scan to the official review action.
+            Clean UI, fast, mobile-friendly.</p>
+
+          <div class="cta-row">
+            <!--
+              Replace redirectTarget value in the script below with either:
+               - A direct Google write-review link: "https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID"
+               - Or a tracking redirect on your site like "/r?to=<encoded-google-url>"
+            -->
+            <a id="review-now" class="btn-primary" href="https://g.page/r/CXJ9QgWpf21HEBM/review" rel="noopener"
+              aria-label="Leave a review now">
+              <!-- star icon SVG -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-right:8px">
+                <path d="M12 17.3l6.18 3.73-1.64-7.03L21 9.24l-7.19-.62L12 2 10.19 8.62 3 9.24l4.46 4.76L5.82 21z"
+                  fill="white" />
+              </svg>
+              Review Now
+            </a>
+
+            <button id="shareBtn" class="btn-secondary" type="button">Share this page</button>
+          </div>
+
+          <p class="explain" id="noteText">After you press <strong>Review Now</strong> we will open Google Reviews (or a
+            short redirect first if you prefer analytics).</p>
+        </div>
+
+        <div class="powered" aria-hidden="false">
+          <!-- Replace filename with bizstreet logo file -->
+          <img src="BizStreet.jpeg" style="height:50px;" alt="BizStreet logo">
+          <div style="font-size:13px;color:var(--muted)">Helping local businesses grow smarter</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ------------------------
+       Lightweight JS - easy to edit
+       Replace PLACEHOLDERS below
+       ------------------------ */
+
+    // OPTION A: direct Google write-review link (replace YOUR_PLACE_ID)
+    // const redirectTarget = "https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID";
+
+    // OPTION B: recommended — use a redirect on your host for tracking:
+    // (set this to '/r?to=<encoded-google-url>' if you plan to create a Netlify _redirects or serverless redirect)
+    const redirectTarget = "https://g.page/r/CXJ9QgWpf21HEBM/review";
+
+    // Hook up the main button
+    document.getElementById("review-now").href = redirectTarget;
+
+    // Share button — uses Web Share API when available
+    const shareBtn = document.getElementById("shareBtn");
+    shareBtn.addEventListener("click", async function () {
+      const page = location.href;
+      try {
+        if (navigator.share) {
+          await navigator.share({ title: "Grawetea — Share your experience", text: "I just left feedback for Grawetea — do the same!", url: page });
+        } else {
+          await navigator.clipboard.writeText(page);
+          alert("Link copied to clipboard. Share it with your friends!");
+        }
+      } catch (e) {
+        alert("Could not share — copied link to clipboard instead.");
+        navigator.clipboard.writeText(page).catch(() => { });
+      }
+    });
+  </script>
+</body>
+
+</html>
